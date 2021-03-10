@@ -1,0 +1,24 @@
+{
+  "name": "mycyc",
+  "version": "1.0.0",
+  "description": "Bicycle E-Renting Web Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KishanPatelGit/mycyc.git"
+  },
+  "author": "Kishan And Jay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KishanPatelGit/mycyc/issues"
+  },
+  "homepage": "https://github.com/KishanPatelGit/mycyc#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.19",
+    "nodemon": "^2.0.7"
+  }
+}
