@@ -5,7 +5,7 @@ export default function Signup() {
     <>
       <div className="min-h-screen flex items-center justify-center">
         <div className="max-w-md w-full bg-white p-8 shadow-lg ring-1 ring-black ring-opacity-5">
-          <h1 className="title">Let's get you set up</h1>
+          <h3 className="title">Let's get you set up</h3>
           <form
             //   onSubmit={signUpForm}
             method="post"
@@ -55,7 +55,7 @@ export default function Signup() {
               {/* <p className="error-msg">{passwordMessage}</p> */}
             </div>
 
-            <p className="mb-4 text-sm">
+            <p className="mb-4 text-sm text-center" style={{ overflowY: "hidden"}}>
               Already have an account, Sign In{" "}
               {/* <Link href="/signin">
                 <span className="font-semibold text-blue-500 hover:text-blue-400 cursor-pointer">
@@ -64,9 +64,11 @@ export default function Signup() {
               </Link> */}
               ?
             </p>
-            <button type="submit" className="btn-primary">
+            <div className="text-center ">
+            <button type="submit" className="btn cycle-btn" style={{ width:"160px"}}>
               Sign Up
             </button>
+            </div>
           </form>
         </div>
       </div>
