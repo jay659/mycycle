@@ -4,7 +4,7 @@ export default function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="max-w-md w-full bg-white p-8 shadow-lg ring-1 ring-black ring-opacity-5">
-        <h1 className="title">Sign in to your account</h1>
+        <h3 className="title text-center">Sign in to your account</h3>
         <form
           // onSubmit={LoginSubmitted}
           method="post"
@@ -62,9 +62,11 @@ export default function Login() {
             </span>
             {/* </Link> */}
           </div>
-          <button type="submit" className="btn-primary">
-            Sign In
-          </button>
+          <div className="text-center ">
+            <button type="submit" className="btn cycle-btn" style={{ width:"160px"}}>
+              Sign In
+            </button>
+            </div>
         </form>
       </div>
     </div>

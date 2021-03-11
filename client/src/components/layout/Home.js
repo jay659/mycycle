@@ -12,6 +12,7 @@ export default function Home() {
   // };
   return (
     <>
+      <img className="banner-images" src="https://black-bikes.com/wp-content/uploads/2017/03/rental-bikes.jpg"  alt="main_image" />
       {/* <Slider /> */}
       <Cards />
       {/* <Maps /> */}
