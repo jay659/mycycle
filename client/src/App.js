@@ -6,19 +6,22 @@ import Signup from "./components/auth/Signup";
 import Navbar from "./components/layout/Navbar";
 import Login from "./components/auth/Login";
 import Home from "./components/layout/Home";
+import DetailsView from "./components/pages/DetailView"
+
 function App() {
   return (
     <>
   
     <BrowserRouter>
       <Navbar />
-    
-      {/* <Alert /> */}
       <Switch>
         <Route exact path="/signup" component={Signup} className="done"/>
         <Route exact path="/login" component={Login} />
+        {/* <Route exact path="/about_us" component={About-Us} /> */}
         <Route exact path="/" component={Home} />
-      </Switch>
+        <Route exact path="/detail_view" component={DetailsView} />
+        
+      </Switch> 
     </BrowserRouter>
     </>
   );

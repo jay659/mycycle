@@ -29,7 +29,7 @@ body{
   justify-content: center;
 }
 .t-orange{
-  color: var(--secondary_color);
+  color: var(--secondary_color) !important;
 }
 p{
   font-family: "PT Serif", Sans-serif;
@@ -78,7 +78,7 @@ h5 {
   font-weight: 400;
   color: #191a20;
 }
-h6,.nav_text {
+h6 {
   font-family: "PT Serif", Sans-serif;
   font-size: 2rem;
   line-height: 24px;
@@ -100,6 +100,9 @@ h6,.nav_text {
 }
 .style_ul{
   list-style: disc !important;
+}
+.w-300{
+  width: 30rem;
 }
 /* ======  title underline========== */
 .title-underline {
@@ -158,6 +161,7 @@ nav{
     z-index: 10;
 }
 
+
 /*Styling Links*/
 .nav-links{
     display: flex;
@@ -172,7 +176,9 @@ nav{
     text-decoration: none;
     
 }
-
+.main_link a:hover{
+  color: var(--secondary_color) !important;
+}
 .nav-links li {
     position: relative;
 }
@@ -274,8 +280,10 @@ nav{
     .nav-links li{
         opacity: 0;
     }
+
     .nav-links li:nth-child(1){
         transition: all 0.5s ease 0.2s;
+        color: var(--secondary_color) !important;
     }
     .nav-links li:nth-child(2){
         transition: all 0.5s ease 0.4s;
@@ -320,6 +328,13 @@ nav{
 }
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
+}
+.nav_logo{
+  width: 10rem;
+}
+.main_link{
+  position: relative;
+  font-size: 2rem !important;
 }
 
 /* =================navbar end========= */
@@ -439,4 +454,60 @@ nav{
 }
 .homepage_card:hover > .card-back{
   transform: perspective(600px) rotateY(0deg);
+}
+/* ============= input ============== */
+.ui-datepicker .ui-datepicker-header {
+  position: relative;
+  padding: .2em 0;
+}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+  border-bottom-right-radius: 4px;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+  border-bottom-left-radius: 4px;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+  border-top-right-radius: 4px;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+  border-top-left-radius: 4px;
+}
+.ui-widget-header {
+  border: 1px solid #aaa;
+  background: #ccc url(images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x;
+  color: #222;
+  font-weight: bold;
+}
+.ui-helper-clearfix {
+  min-height: 0;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    border-bottom-right-radius: 4px;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+    border-bottom-left-radius: 4px;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+    border-top-right-radius: 4px;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+    border-top-left-radius: 4px;
+}
+.ui-widget-content {
+    border: 1px solid #aaa;
+    background: #fff url(images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x;
+    color: #222;
+}
+.ui-widget {
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 1.1em;
+}
+.ui-datepicker {
+    width: 17em;
+    padding: .2em .2em 0;
+    display: none;
+}
+.ui-helper-clearfix {
+    min-height: 0;
 }
