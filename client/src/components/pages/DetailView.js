@@ -45,8 +45,8 @@ function DetailView() {
         </div>
        
         <div>
-            {/* <Form /> */}
-             <Form2 />
+            <Form />
+             {/* <Form2 /> */}
         </div>
       </div>
     </>
