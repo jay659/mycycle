@@ -45,8 +45,8 @@ export default function Navbar2() {
             <div className="text-center ">
               <button
                 type="submit"
-                className="btn cycle-btn"
-                style={{ width: "130px" }}
+                className="cycle-btn"
+                style={{ width: "100px" }}
               >
                 Sign Up
               </button>
@@ -54,8 +54,8 @@ export default function Navbar2() {
             <div className="text-center mx-3 ">
               <button
                 type="submit"
-                className="btn cycle-btn"
-                style={{ width: "130px" }}
+                className="cycle-btn"
+                style={{ width: "100px" }}
               >
                 Sign In
               </button>
