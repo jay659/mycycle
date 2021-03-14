@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://mycycle:kishan12345@mycycle.nfq2a.mongodb.net/mycycle?retryWrites=true&w=majority",
+  "jwtSecret": "secret"
+}
