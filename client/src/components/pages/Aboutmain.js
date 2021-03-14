@@ -14,6 +14,7 @@ function Aboutmain() {
             <img
               src="https://content.jdmagicbox.com/comp/ahmedabad/m4/079pxx79.xx79.161117204233.n9m4/catalogue/mybyk-terminal-shivranjani-brts-ahmedabad-bicycle-on-hire-r1zqlw2k2r.jpg"
               alt="home page cycle"
+              className="img-fluid "
             />
           </div>
           <div className="col-sm-12 col-md-12 col-12 col-lg-8 col-xl-8">
