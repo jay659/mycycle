@@ -14,16 +14,11 @@ function Form() {
               <label htmlFor="emiil">email:</label>
               <input type="email" class="form-control" id="email" />
             </div>
-            {/* <div class="checkbox">
+            <div class="checkbox">
               <label>
                 <input type="checkbox" /> Remember me
               </label>
-            </div> */}
-             <div class="form-group">
-              <label htmlFor="appt">Select Time:</label>
-              <input type="time" class="form-control" id="appt" />
             </div>
-
             <div class="form-group">
               <label htmlFor="location">Pick Up Location:</label>
               <select class="form-control" id="location">
