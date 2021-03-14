@@ -1,7 +1,5 @@
 import React from "react";
-import $ from "jquery";
-
-
+// import $ from "jquery";
 
 function Form2() {
   return (
