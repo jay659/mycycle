@@ -67,7 +67,7 @@ function Cards() {
                     </table>
                  </div>
                   <div className="d-flex justify-content-center mt-4">
-                  <a className="btn cycle-btn" href="#" style={{ width: "140px" }} >
+                  <a className="btn cycle-btn" href="/detail_view" style={{ width: "140px" }} >
                     book now
                   </a>
                   </div>
