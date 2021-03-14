@@ -7,12 +7,14 @@ import Navbar from "./components/layout/Navbar";
 import Login from "./components/auth/Login";
 import Home from "./components/layout/Home";
 import DetailsView from "./components/pages/DetailView";
+import Navbar2 from "./components/layout/Navbar2";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+        {/* <Navbar /> */}
+        <Navbar2 />
 
         <Switch>
           <Route exact path="/signup" component={Signup} className="done" />
