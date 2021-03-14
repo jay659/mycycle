@@ -11,7 +11,7 @@ function BenifitsOfCycle() {
             </h2>
           </div>
         </div>
-        
+
         <div className="col-lg-7 col-md-12 col-12 order-2 d-flex justify-content-center">
           <ul className="style_ul ">
             <li>

@@ -1,6 +1,7 @@
 import React from "react";
 import Aboutmain from "./Aboutmain";
 import BenifitsOfCycle from "./BenifitsOfCycle";
+import { Link } from "react-router-dom";
 
 function Cards() {
   return (
@@ -8,14 +9,13 @@ function Cards() {
       <div className="container-fluid pt-50">
         <Aboutmain />
         {/* card section */}
-        <div className="card-section mt-4" style={{height:"auto"}}>
+        <div className="card-section mt-4" style={{ height: "auto" }}>
           <div className="row text-center">
             <h2 className="title-underline capitalize">
               best<span className="t-orange"> Ones</span>
             </h2>
           </div>
           <div className="row pt-50 ">
-         
             <div className="col-lg-3 my-2 col-md-6 col-12">
               <div className="card homepage_card">
                 <div className="card-front p-2">
@@ -26,7 +26,6 @@ function Cards() {
                   />
                   <div className="card-body ">
                     <h5 className="card-title d-flex justify-content-center">
-                      {" "}
                       Hero
                     </h5>
 
@@ -45,7 +44,6 @@ function Cards() {
                           <td colSpan="2">
                             <h4 className="text-center">Prices</h4>
                           </td>
-                       
                         </tr>
                         <tr>
                           <td>3 hours</td>
@@ -71,13 +69,11 @@ function Cards() {
                     </table>
                   </div>
                   <div className="d-flex justify-content-center ">
-                    <a
-                      className="cycle-btn"
-                      href="/detail_view"
-                      style={{width:'120px'}}
-                    >
-                      book now
-                    </a>
+                    <Link to="/detailview">
+                      <a className="cycle-btn" style={{ width: "120px" }}>
+                        book now
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
