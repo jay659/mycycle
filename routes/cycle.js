@@ -36,8 +36,9 @@ router.post("/", async (req, res) => {
 // @route    GET api/users
 // @desc     Get a user
 // @access   Public
-router.get("/", (req, res) => {
-  res.send("get a User");
+router.get("/", async (req, res) => {
+  let cycle = await Cycle.find();
+  await res.send(cycle);
 });
 
 module.exports = router;
