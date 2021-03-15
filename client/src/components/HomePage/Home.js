@@ -1,7 +1,7 @@
 import React from "react";
-import Cards from "../pages/Cards";
+import Cards from "./Cards";
+import banner from "../Images/cycle_banner.jpg";
 
-import banner from "../files/images/cycle_banner.jpg";
 export default function Home() {
   return (
     <>

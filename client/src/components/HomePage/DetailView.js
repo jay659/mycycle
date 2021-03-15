@@ -1,8 +1,7 @@
 import React from "react";
-import Form from "../layout/Form"
-import Form2 from "../layout/Form2";
+import Form from "../Layout/Form";
+import Form2 from "../Layout/Form2";
 function DetailView() {
-  
   return (
     <>
       <div className="container-fluid ">
@@ -43,10 +42,15 @@ function DetailView() {
             </div>
           </div>
         </div>
-       
+
         <div>
+<<<<<<< HEAD:client/src/components/pages/DetailView.js
             <Form />
              {/* <Form2 /> */}
+=======
+          <Form />
+          {/* <Form2 /> */}
+>>>>>>> af2822405c9981dde7d949efe25e061279642130:client/src/components/HomePage/DetailView.js
         </div>
       </div>
     </>

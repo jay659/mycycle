@@ -1,13 +1,11 @@
 import React from "react";
-import logo from "../files/images/mybyc_logo.png";
+import logo from "../Images/mybyc_logo.png";
+import { Link } from "react-router-dom";
 
-export default function Navbar2() {
+export default function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-        {/* <a className="navbar-brand" href="#">
-          Navbar
-        </a> */}
         <img src={logo} className="img-fluid mr-5" alt="manin" width="50px" />
 
         <button
@@ -25,40 +23,52 @@ export default function Navbar2() {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item active">
-              <a className="nav-link font-large hovered" href="#">
+              <Link to="/" className="nav-link font-large hovered" href="#">
                 Home <span className="sr-only">(current)</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link font-large hovered" href="#">
+              <Link
+                to="/aboutus"
+                className="nav-link font-large hovered"
+                href="#"
+              >
                 About Us
-              </a>
+              </Link>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link font-large hovered" href="#">
-                Booking
-              </a>
+              <Link
+                to="bookdetails"
+                className="nav-link font-large hovered"
+                href="#"
+              >
+                Book Details
+              </Link>
             </li>
           </ul>
           <form className="form-inline my-2 my-lg-0">
             <div className="text-center ">
-              <button
-                type="submit"
-                className="cycle-btn"
-                style={{ width: "100px" }}
-              >
-                Sign Up
-              </button>
+              <Link to="/signup">
+                <button
+                  type="submit"
+                  className="cycle-btn"
+                  style={{ width: "100px" }}
+                >
+                  Sign Up
+                </button>
+              </Link>
             </div>
             <div className="text-center mx-3 ">
-              <button
-                type="submit"
-                className="cycle-btn"
-                style={{ width: "100px" }}
-              >
-                Sign In
-              </button>
+              <Link to="/signin">
+                <button
+                  type="submit"
+                  className="cycle-btn"
+                  style={{ width: "100px" }}
+                >
+                  Sign In
+                </button>
+              </Link>
             </div>
           </form>
         </div>

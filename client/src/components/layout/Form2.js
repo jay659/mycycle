@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { useEffect } from "react";
 import $ from "jquery";
+=======
+import React from "react";
+// import $ from "jquery";
+>>>>>>> af2822405c9981dde7d949efe25e061279642130
 
 function Form2() {
  
