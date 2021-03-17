@@ -6,22 +6,22 @@ function Form() {
       <div className="row">
         <div className="col-6">
           <form action="/" method="Post">
-            <div class="form-group">
+            <div className="form-group">
               <label htmlFor="user_name">full Name:</label>
-              <input type="text" class="form-control" id="u_name" />
+              <input type="text" className="form-control" id="u_name" />
             </div>
-            <div class="form-group">
+            <div className="form-group">
               <label htmlFor="emiil">email:</label>
-              <input type="email" class="form-control" id="email" />
+              <input type="email" className="form-control" id="email" />
             </div>
-            <div class="checkbox">
+            <div className="checkbox">
               <label>
                 <input type="checkbox" /> Remember me
               </label>
             </div>
-            <div class="form-group">
+            <div className="form-group">
               <label htmlFor="location">Pick Up Location:</label>
-              <select class="form-control" id="location">
+              <select className="form-control" id="location">
                 <option value="Ghodasar">Ghodasar</option>
                 <option value="Nikol">Nikol</option>
                 <option value="maninagar">maninagar</option>
@@ -30,7 +30,7 @@ function Form() {
             </div>
             <button
               type="submit"
-              class="btn cycle-btn"
+              className="btn cycle-btn"
               style={{ width: "150px" }}
             >
               Submit

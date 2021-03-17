@@ -4,27 +4,27 @@ import React from "react";
 function Form2() {
   return (
     <>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="input-group date date-time-picker">
-              <input type="text" class="form-control" id="datetimepicker" />
-              <span class="input-group-addon">
-                <i class="glyphicon glyphicon-calendar"></i>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-6">
+            <div className="input-group date date-time-picker">
+              <input type="text" className="form-control" id="datetimepicker" />
+              <span className="input-group-addon">
+                <i className="glyphicon glyphicon-calendar"></i>
               </span>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="form-group">
-              <div class="input-group date" id="datetimepicker3">
-                <input type="text" class="form-control" />
-                <span class="input-group-addon">
-                  <span class="glyphicon glyphicon-time"></span>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-6">
+            <div className="form-group">
+              <div className="input-group date" id="datetimepicker3">
+                <input type="text" className="form-control" />
+                <span className="input-group-addon">
+                  <span className="glyphicon glyphicon-time"></span>
                 </span>
               </div>
             </div>

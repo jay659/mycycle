@@ -6,7 +6,7 @@ export default function SignIn() {
     <>
       <div className="login-form">
         <div>
-          <Alert />
+          {/* <Alert /> */}
           <form method="post">
             <h1 className="text-center">Sign In</h1>
 

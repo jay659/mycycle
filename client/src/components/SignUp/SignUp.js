@@ -1,34 +1,37 @@
-import React from "react";
+import React, { useContext } from "react";
+import UserContext from "../../context/User/UserContext";
 import Alert from "../Layout/Alert";
 
 export default function SignUp() {
+  const userContext = useContext(UserContext);
+
   return (
     <>
       <div className="login-form">
         <div>
-          <Alert />
+          {/* <Alert /> */}
           <form method="post">
-            <h1 class="text-center">Sign Up</h1>
-            <div class="form-group">
+            <h1 Name="text-center">Sign Up</h1>
+            <div className="form-group">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 placeholder="Username"
                 required="required"
               />
             </div>
-            <div class="form-group">
+            <div className="form-group">
               <input
                 type="email"
-                class="form-control"
+                className="form-control"
                 placeholder="Email"
                 required="required"
               />
             </div>
-            <div class="form-group">
+            <div className="form-group">
               <input
                 type="password"
-                class="form-control"
+                className="form-control"
                 placeholder="Password"
                 required="required"
               />
@@ -44,7 +47,7 @@ export default function SignUp() {
               </button>
             </div>
           </form>
-          <p class="text-center">
+          <p className="text-center">
             <a href="#" className="t-blue font-weight-bold">
               Sign In here
             </a>
