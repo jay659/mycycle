@@ -296,7 +296,7 @@ h6 {
 /* card */
 .card-front,
 .card-back {
-  height: 19rem;
+  height: 22rem;
   width: 100%;
   backface-visibility: hidden;
   transition: all 0.4s linear;
@@ -716,6 +716,7 @@ td.text-center {
 td.text-right {
   text-align: right;
 }
+/* ==========date and time ======= */
 
 /* =======end======== */
 /* ===== media queries ====== */
