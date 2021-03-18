@@ -2,8 +2,16 @@ import React, { useContext, useEffect, useState } from "react";
 import UserContext from "../../context/User/UserContext";
 import Alert from "../Layout/Alert";
 
-export default function SignUp() {
-  const { Signup } = useContext(UserContext);
+export default function SignUp(props) {
+  const { signup, isAuthenticated, error, clearError } = useContext(
+    UserContext
+  );
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      props.history.push("/");
+    }
+  }, [isAuthenticated, props.history]);
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -15,15 +23,25 @@ export default function SignUp() {
 
   function onSubmit(e) {
     e.preventDefault();
-    console.log(name, email, password);
-    Signup({ name, email, password });
+
+    signup({ name, email, password });
+    setUser({
+      name: "",
+      email: "",
+      password: "",
+    });
   }
-  useEffect(() => {});
+
+  if (error) {
+    setTimeout(() => {
+      clearError();
+    }, 2000);
+  }
   return (
     <>
       <div className="login-form">
         <div>
-          {/* <Alert /> */}
+          {error && <Alert error={error} />}
           <form method="post" onSubmit={onSubmit}>
             <h1 className="text-center">Sign Up</h1>
             <div className="form-group">
