@@ -1,7 +1,9 @@
+
 import Form from "../Layout/Form";
 import React, { useRef, useEffect } from "react";
 
 import { gsap } from "gsap";
+
 // import {scrollTrigger} from "gsap/scrollTrigger";
 
 function DetailView() {
