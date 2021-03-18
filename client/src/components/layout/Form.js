@@ -1,34 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 
+import { TextField } from "@material-ui/core";
 function Form() {
+
+  const onsubmits =(e)=>{
+    e.preventDefault();
+    // console.log(e.target)
+   console.log( document.getElementById('Pickup').value)
+   console.log(document.getElementById('location').value)
+   
+  }
+
   return (
-    
     <>
       <div className="row text-center">
         <div className="col-12 col-md-12 col-lg-6 ">
-          <form action="/" method="Post">
+          <form onSubmit={ onsubmits }>
             <div class="form-group ">
               <div className="d-flex justify-content-left">
-              <label htmlFor="user_name">full Name:</label>
+                <label htmlFor="user_name">full Name:</label>
               </div>
-              <input type="text" class="form-control" id="u_name" />
+              <input type="text" class="form-control" id="u_name" placeholder="enter your name"  />
             </div>
             <div class="form-group">
-              <label htmlFor="emiil">email:</label>
+              <div className="d-flex justify-content-left">
+                <label htmlFor="emiil">email:</label>
+              </div>
               <input type="email" class="form-control" id="email" />
             </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" /> Remember me
-              </label>
+
+            <div className="form-group d-flex justify-content-between" noValidate>
+              <TextField
+                id="Pickup"
+                label="Pickup Date And Time"
+                type="datetime-local"
+                defaultValue="2021-06-24T10:30"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+              />
+               
             </div>
-            <div class="form-group">
-            <label for="appt">Select a time:</label>
-             <input type="time" id="appt" name="appt" class="form-control" />
+
+            <div className="form-group">
+              <div className="d-flex justify-content-left">
+                <label htmlFor="location">Pick Up Location:</label>
               </div>
-            <div class="form-group">
-              <label htmlFor="location">Pick Up Location:</label>
-              <select class="form-control" id="location">
+              <select className="form-control" id="location">
                 <option value="Ghodasar">Ghodasar</option>
                 <option value="Nikol">Nikol</option>
                 <option value="maninagar">maninagar</option>
