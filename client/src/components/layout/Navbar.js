@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import logo from "../Images/mybyc_logo.png";
 import { Link } from "react-router-dom";
+import UserContext from "../../context/User/UserContext";
 
 export default function Navbar() {
+  const { loadUser, isAuthenticated, user, logout } = useContext(UserContext);
+
+  const onClick = () => {
+    logout();
+  };
+
+  useEffect(() => {
+    loadUser();
+  }, []);
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -36,41 +47,50 @@ export default function Navbar() {
                 About Us
               </Link>
             </li>
-
-            <li className="nav-item">
-              <Link
-                to="bookdetails"
-                className="nav-link font-large hovered"
-                href="#"
-              >
-                Book Details
-              </Link>
-            </li>
+            {isAuthenticated && (
+              <li className="nav-item">
+                <Link
+                  to="bookdetails"
+                  className="nav-link font-large hovered"
+                  href="#"
+                >
+                  Book Details
+                </Link>
+              </li>
+            )}
           </ul>
-          <form className="form-inline my-2 my-lg-0">
-            <div className="text-center ">
-              <Link to="/signup">
-                <button
-                  type="submit"
-                  className="cycle-btn"
-                  style={{ width: "100px" }}
-                >
-                  Sign Up
-                </button>
-              </Link>
+
+          {!isAuthenticated ? (
+            <form className="form-inline my-2 my-lg-0">
+              <div className="text-center ">
+                <Link to="/signup">
+                  <button
+                    type="submit"
+                    className="cycle-btn"
+                    style={{ width: "100px" }}
+                  >
+                    Sign Up
+                  </button>
+                </Link>
+              </div>
+              <div className="text-center mx-3 ">
+                <Link to="/signin">
+                  <button
+                    type="submit"
+                    className="cycle-btn"
+                    style={{ width: "100px" }}
+                  >
+                    Sign In
+                  </button>
+                </Link>
+              </div>
+            </form>
+          ) : (
+            <div>
+              <h4 className="ml-10">Welcome,{user && user.name}</h4>
+              <button onClick={onClick}>logout</button>
             </div>
-            <div className="text-center mx-3 ">
-              <Link to="/signin">
-                <button
-                  type="submit"
-                  className="cycle-btn"
-                  style={{ width: "100px" }}
-                >
-                  Sign In
-                </button>
-              </Link>
-            </div>
-          </form>
+          )}
         </div>
       </nav>
     </div>

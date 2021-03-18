@@ -1,52 +1,50 @@
 
-import React,{useRef,useEffect} from "react";
-
 import Form from "../Layout/Form";
+import React, { useRef, useEffect } from "react";
 
+import { gsap } from "gsap";
 
-import {gsap} from "gsap"
 // import {scrollTrigger} from "gsap/scrollTrigger";
-
 
 function DetailView() {
   // gsap.registerPlugin(scrollTrigger);
-  const ref= useRef(null);
-  useEffect(()=>{
+  const ref = useRef(null);
+  useEffect(() => {
     const element = ref.current;
     gsap.fromTo(
       element.querySelector(".text"),
       {
-        opacity:0,
-        x: 200
+        opacity: 0,
+        x: 200,
       },
       {
-        opacity:1,
+        opacity: 1,
         x: 0,
         duration: 1,
-        ease:"ease",
-        scrub: true
+        ease: "ease",
+        scrub: true,
       }
-    )
+    );
     gsap.fromTo(
       element.querySelector(".image"),
       {
-        opacity:0,
-        x: -200
+        opacity: 0,
+        x: -200,
       },
       {
-        opacity:1,
+        opacity: 1,
         x: 0,
         duration: 1,
-        ease:"ease",
-        scrub: true
+        ease: "ease",
+        scrub: true,
       }
-    )
-  },[])
+    );
+  }, []);
 
   return (
     <>
       <div className="container-fluid " ref={ref}>
-        <div className="row pt-50 " >
+        <div className="row pt-50 ">
           <div className="col-12 mb-5">
             <div className="details-title text-center">
               <h2 className="title-underline">
@@ -76,7 +74,6 @@ function DetailView() {
                 beautiful city on an original, Green.
               </p>
             </div>
-           
           </div>
         </div>
 
