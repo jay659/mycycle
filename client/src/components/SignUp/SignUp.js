@@ -1,20 +1,37 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import UserContext from "../../context/User/UserContext";
 import Alert from "../Layout/Alert";
 
 export default function SignUp() {
-  const userContext = useContext(UserContext);
+  const { Signup } = useContext(UserContext);
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+  const { name, email, password } = user;
 
+  const onChange = (e) => setUser({ ...user, [e.target.name]: e.target.value });
+
+  function onSubmit(e) {
+    e.preventDefault();
+    console.log(name, email, password);
+    Signup({ name, email, password });
+  }
+  useEffect(() => {});
   return (
     <>
       <div className="login-form">
         <div>
           {/* <Alert /> */}
-          <form method="post">
+          <form method="post" onSubmit={onSubmit}>
             <h1 Name="text-center">Sign Up</h1>
             <div className="form-group">
               <input
                 type="text"
+                name="name"
+                value={name}
+                onChange={onChange}
                 className="form-control"
                 placeholder="Username"
                 required="required"
@@ -23,6 +40,9 @@ export default function SignUp() {
             <div className="form-group">
               <input
                 type="email"
+                name="email"
+                value={email}
+                onChange={onChange}
                 className="form-control"
                 placeholder="Email"
                 required="required"
@@ -31,6 +51,9 @@ export default function SignUp() {
             <div className="form-group">
               <input
                 type="password"
+                name="password"
+                value={password}
+                onChange={onChange}
                 className="form-control"
                 placeholder="Password"
                 required="required"
