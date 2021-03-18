@@ -70,7 +70,7 @@ function Cards() {
                   </div>
                   <div className="d-flex justify-content-center ">
                     <Link to="/detailview">
-                      <a className="cycle-btn" style={{ width: "120px" }}>
+                      <a className="cycle-btn" href="#" style={{ width: "120px" }}>
                         book now
                       </a>
                     </Link>
