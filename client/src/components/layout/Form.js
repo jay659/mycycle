@@ -2,12 +2,15 @@ import React from "react";
 
 function Form() {
   return (
+    
     <>
-      <div className="row">
-        <div className="col-6">
+      <div className="row text-center">
+        <div className="col-12 col-md-12 col-lg-6 ">
           <form action="/" method="Post">
-            <div class="form-group">
+            <div class="form-group ">
+              <div className="d-flex justify-content-left">
               <label htmlFor="user_name">full Name:</label>
+              </div>
               <input type="text" class="form-control" id="u_name" />
             </div>
             <div class="form-group">
@@ -19,6 +22,10 @@ function Form() {
                 <input type="checkbox" /> Remember me
               </label>
             </div>
+            <div class="form-group">
+            <label for="appt">Select a time:</label>
+             <input type="time" id="appt" name="appt" class="form-control" />
+              </div>
             <div class="form-group">
               <label htmlFor="location">Pick Up Location:</label>
               <select class="form-control" id="location">
