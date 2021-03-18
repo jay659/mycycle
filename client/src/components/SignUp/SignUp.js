@@ -25,7 +25,7 @@ export default function SignUp() {
         <div>
           {/* <Alert /> */}
           <form method="post" onSubmit={onSubmit}>
-            <h1 Name="text-center">Sign Up</h1>
+            <h1 className="text-center">Sign Up</h1>
             <div className="form-group">
               <input
                 type="text"

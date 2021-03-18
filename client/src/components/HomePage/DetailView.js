@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "../layout/Form";
+import Form from "../Layout/Form";
 function DetailView() {
   return (
     <>
@@ -43,7 +43,7 @@ function DetailView() {
         </div>
 
         <div>
-            <Form />
+          <Form />
         </div>
       </div>
     </>
