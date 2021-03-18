@@ -2,38 +2,55 @@ import React from "react";
 
 export default function BookDetails() {
   return (
-    <div>
-      <h1>Table show your Booking Datails</h1>
-      <table className="table">
-        <thead className="thead-dark">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <>
+      <div className="container-fliud pt-50">
+        <div className="row">
+          <div className="col-12">
+            <table className="table-fill" width="100%">
+              <thead>
+                <tr>
+                  <th className="item-image">Item</th>
+                  <th className="text-left">Name</th>
+                  {/* <th className="text-left">Number</th> */}
+                  <th className="text-left">Booking ID</th>
+                  <th className="text-left">pickup time</th>
+                  <th className="text-left">pickup Location</th>
+                </tr>
+              </thead>
+              <tbody className="table-hover">
+                <tr>
+                  <td>
+                    <img
+                      src="https://content.jdmagicbox.com/comp/ahmedabad/m4/079pxx79.xx79.161117204233.n9m4/catalogue/mybyk-terminal-shivranjani-brts-ahmedabad-bicycle-on-hire-r1zqlw2k2r.jpg"
+                      alt="detail-cycle-view"
+                      width="100"
+                    />
+                  </td>
+                  <td className="text-left">jay</td>
+                  {/* <td className="text-left">5000000</td> */}
+                  <td className="text-left">50000hdfkjfh00</td>
+                  <td className="text-left">12 AM</td>
+                  <td className="text-left"> Ghodasar</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://content.jdmagicbox.com/comp/ahmedabad/m4/079pxx79.xx79.161117204233.n9m4/catalogue/mybyk-terminal-shivranjani-brts-ahmedabad-bicycle-on-hire-r1zqlw2k2r.jpg"
+                      alt="detail-cycle-view"
+                      width="100"
+                    />
+                  </td>
+                  <td className="text-left">kisan</td>
+                  {/* <td className="text-left">1000000</td> */}
+                  <td className="text-left">1fsdiufgiukn000000</td>
+                  <td className="text-left">11 PM</td>
+                  <td className="text-left"> nikol</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
