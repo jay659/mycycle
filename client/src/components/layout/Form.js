@@ -1,9 +1,6 @@
-import React,{useEffect} from "react";
-import $ from 'react'
-console.log( document.getElementById("appt"));
+import React from "react";
+
 function Form() {
- 
- 
   return (
     
     <>

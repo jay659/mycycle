@@ -1,5 +1,5 @@
 import React from "react";
-import Alert from "../Layout/Alert";
+import Alert from "../layout/Alert";
 
 export default function SignUp() {
   return (

@@ -1,6 +1,5 @@
 import React from "react";
-import Form from "../Layout/Form";
-import Form2 from "../Layout/Form2";
+import Form from "../layout/Form";
 function DetailView() {
   return (
     <>
@@ -44,13 +43,7 @@ function DetailView() {
         </div>
 
         <div>
-<<<<<<< HEAD:client/src/components/pages/DetailView.js
             <Form />
-             {/* <Form2 /> */}
-=======
-          <Form />
-          {/* <Form2 /> */}
->>>>>>> af2822405c9981dde7d949efe25e061279642130:client/src/components/HomePage/DetailView.js
         </div>
       </div>
     </>
