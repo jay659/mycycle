@@ -22,6 +22,7 @@ function Form() {
               </div>
               <input type="text" class="form-control" id="u_name" placeholder="enter your name"  />
             </div>
+
             <div class="form-group">
               <div className="d-flex justify-content-left">
                 <label htmlFor="emiil">email:</label>
@@ -46,6 +47,7 @@ function Form() {
               <div className="d-flex justify-content-left">
                 <label htmlFor="location">Pick Up Location:</label>
               </div>
+
               <select className="form-control" id="location">
                 <option value="Ghodasar">Ghodasar</option>
                 <option value="Nikol">Nikol</option>
@@ -55,7 +57,7 @@ function Form() {
             </div>
             <button
               type="submit"
-              class="btn cycle-btn"
+              className="btn cycle-btn"
               style={{ width: "150px" }}
             >
               Submit

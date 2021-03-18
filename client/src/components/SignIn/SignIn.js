@@ -1,12 +1,12 @@
 import React from "react";
-import Alert from "../layout/Alert"
+import Alert from "../Layout/Alert";
 
 export default function SignIn() {
   return (
     <>
       <div className="login-form">
         <div>
-          <Alert />
+          {/* <Alert /> */}
           <form method="post">
             <h1 className="text-center">Sign In</h1>
 

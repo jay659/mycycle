@@ -32,11 +32,11 @@ router.post("/", async (req, res) => {
       return res.status(400).json({ msg: "Invalid Credentials" });
     }
 
-    const isMath = await bcrypt.compare(password, user.password);
+    // const isMath = await bcrypt.compare(password, user.password);
 
-    if (!isMath) {
-      return res.status(400).json({ msg: "Invalid Credentials" });
-    }
+    // if (!isMath) {
+    //   return res.status(400).json({ msg: "Invalid Credentials" });
+    // }
 
     const payload = {
       user: {

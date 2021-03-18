@@ -1,34 +1,60 @@
-import React from "react";
-import Alert from "../layout/Alert";
+import React, { useContext, useEffect, useState } from "react";
+import UserContext from "../../context/User/UserContext";
+import Alert from "../Layout/Alert";
 
 export default function SignUp() {
+  const { Signup } = useContext(UserContext);
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+  const { name, email, password } = user;
+
+  const onChange = (e) => setUser({ ...user, [e.target.name]: e.target.value });
+
+  function onSubmit(e) {
+    e.preventDefault();
+    console.log(name, email, password);
+    Signup({ name, email, password });
+  }
+  useEffect(() => {});
   return (
     <>
       <div className="login-form">
         <div>
-          <Alert />
-          <form method="post">
-            <h1 class="text-center">Sign Up</h1>
-            <div class="form-group">
+          {/* <Alert /> */}
+          <form method="post" onSubmit={onSubmit}>
+            <h1 className="text-center">Sign Up</h1>
+            <div className="form-group">
               <input
                 type="text"
-                class="form-control"
+                name="name"
+                value={name}
+                onChange={onChange}
+                className="form-control"
                 placeholder="Username"
                 required="required"
               />
             </div>
-            <div class="form-group">
+            <div className="form-group">
               <input
                 type="email"
-                class="form-control"
+                name="email"
+                value={email}
+                onChange={onChange}
+                className="form-control"
                 placeholder="Email"
                 required="required"
               />
             </div>
-            <div class="form-group">
+            <div className="form-group">
               <input
                 type="password"
-                class="form-control"
+                name="password"
+                value={password}
+                onChange={onChange}
+                className="form-control"
                 placeholder="Password"
                 required="required"
               />
@@ -44,7 +70,7 @@ export default function SignUp() {
               </button>
             </div>
           </form>
-          <p class="text-center">
+          <p className="text-center">
             <a href="#" className="t-blue font-weight-bold">
               Sign In here
             </a>
