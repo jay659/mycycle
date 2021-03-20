@@ -35,7 +35,7 @@ export default function SignIn(props) {
   if (error) {
     setTimeout(() => {
       clearError();
-    }, 2000);
+    }, 3000);
   }
   return (
     <>

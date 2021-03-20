@@ -19,7 +19,7 @@ export default function UserState(props) {
 
     try {
       const res = await axios.get("/api/auth");
-      console.log(res.data);
+
       dispatch({
         type: "USER_LOADED",
         payload: res.data,
@@ -63,7 +63,7 @@ export default function UserState(props) {
 
     try {
       const res = await axios.post("/api/auth", formData, config);
-      console.log(res.data);
+
       dispatch({
         type: "LOGIN_SUCCESS",
         payload: res.data,

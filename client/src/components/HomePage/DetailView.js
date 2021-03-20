@@ -1,14 +1,17 @@
 
 import Form from "../Layout/Form";
 import React, { useRef, useEffect } from "react";
-
+import { useLocation } from "react-router-dom";
 import { gsap } from "gsap";
 
 // import {scrollTrigger} from "gsap/scrollTrigger";
 
 function DetailView() {
-  // gsap.registerPlugin(scrollTrigger);
   const ref = useRef(null);
+  const location = useLocation();
+
+  const cycle = location.state;
+
   useEffect(() => {
     const element = ref.current;
     gsap.fromTo(
@@ -57,7 +60,7 @@ function DetailView() {
             <div className="detail_view_image_wrapper">
               <img
                 className="img-fluid image"
-                src="https://black-bikes.com/wp-content/uploads/2016/12/handbrake-bike.jpg"
+                src={cycle && cycle.image_url}
                 alt="detail_view"
               ></img>
             </div>
@@ -78,7 +81,7 @@ function DetailView() {
         </div>
 
         <div>
-          <Form />
+          <Form cycle={cycle} />
         </div>
       </div>
     </>

@@ -1,13 +1,15 @@
 import React, { useContext, useEffect } from "react";
 import logo from "../Images/mybyc_logo.png";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import UserContext from "../../context/User/UserContext";
 
-export default function Navbar() {
+export default function Navbar(props) {
+  let history = useHistory();
   const { loadUser, isAuthenticated, user, logout } = useContext(UserContext);
 
   const onClick = () => {
     logout();
+    history.push("/");
   };
 
   useEffect(() => {
@@ -50,7 +52,7 @@ export default function Navbar() {
             {isAuthenticated && (
               <li className="nav-item">
                 <Link
-                  to="bookdetails"
+                  to="/bookdetails"
                   className="nav-link font-large hovered"
                   href="#"
                 >
