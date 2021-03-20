@@ -9,22 +9,25 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import BookDetails from "./components/BookDetails/BookDetails";
 import DetailView from "./components/HomePage/DetailView";
 import UserState from "./context/User/UserState";
+import CycleState from "./context/Cycle/CycleState";
 
 function App() {
   return (
     <>
       <UserState>
-        <BrowserRouter>
-          <Navbar />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/signup" component={SignUp} className="done" />
-            <Route exact path="/signin" component={SignIn} />
-            <Route exact path="/aboutus" component={AboutUs} />
-            <Route exact path="/bookdetails" component={BookDetails} />
-            <Route exact path="/detailview" component={DetailView} />
-          </Switch>
-        </BrowserRouter>
+        <CycleState>
+          <BrowserRouter>
+            <Navbar />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/signup" component={SignUp} className="done" />
+              <Route exact path="/signin" component={SignIn} />
+              <Route exact path="/aboutus" component={AboutUs} />
+              <Route exact path="/bookdetails" component={BookDetails} />
+              <Route exact path="/detailview/:id" component={DetailView} />
+            </Switch>
+          </BrowserRouter>
+        </CycleState>
       </UserState>
     </>
   );

@@ -1,9 +1,15 @@
 import React from "react";
 
-export default function Alert({ error }) {
+export default function Alert({ error, successMessage }) {
   return (
-    <div className="alert alert-danger " role="alert">
-      {error}
+    <div
+      className={`alert ${error && `alert-danger`} ${
+        successMessage && `alert-success`
+      } `}
+      role="alert"
+    >
+      {error && error}
+      {successMessage && successMessage}
     </div>
   );
 }

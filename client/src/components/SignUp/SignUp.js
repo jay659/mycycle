@@ -35,7 +35,7 @@ export default function SignUp(props) {
   if (error) {
     setTimeout(() => {
       clearError();
-    }, 2000);
+    }, 3000);
   }
   return (
     <>
